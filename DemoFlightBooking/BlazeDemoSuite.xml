@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web_testcases" parallel="false">
+	<parameter name="browser" value="chrome" />
+	<test name="Load Prereq">
+		<classes>
+			<class name="TestSelenium.DemoFlightBooking.BaseFunction" />
+		</classes>
+	</test>
+
+	<test
+		name="Verify that flight is available to the destination selected by the user">
+		<classes>
+			<class name="TestSelenium.DemoFlightBooking.SearchFlight" />
+			<methods>
+				<exclude name="testWithoutDetails" />
+			</methods>
+		</classes>
+	</test>
+
+	<test
+		name="Verify that user should not be able to book a flight without providing all details">
+		<classes>
+			<class name="TestSelenium.DemoFlightBooking.SearchFlight" />
+			<methods>
+				<exclude name="SearchFlightForDestination" />
+			</methods>
+		</classes>
+	</test>
+	<test
+		name="Verify that user should  be able to register to the portal by providing all details">
+		<classes>
+			<class name="TestSelenium.DemoFlightBooking.RegistrationLogin" />
+			<methods>
+				<exclude name="loginSuccessfull" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test
+		name="Verify that user should  be able to login to the portal by providing all details">
+		<classes>
+			<class name="TestSelenium.DemoFlightBooking.RegistrationLogin" />
+			<methods>
+				<exclude name="registerUser" />
+			</methods>
+		</classes>
+	</test>
+</suite>

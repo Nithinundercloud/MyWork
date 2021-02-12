@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web_testcases" parallel="false">
+
+	<test
+		name="Verify that latest API returns sucessfully with correct status code">
+		<classes>
+			<class name="TestRestAssure.SpaceXAPITest" />
+			<methods>
+				<exclude name="headerinfo" />
+				<exclude name="spaceXattempt" />
+				<exclude name="falseRequest" />
+			</methods>
+		</classes>
+	</test>
+
+	<test
+		name="Verify that latest API returns sucessfully with correct header information">
+		<classes>
+			<class name="TestRestAssure.SpaceXAPITest" />
+			<methods>
+				<exclude name="statusCode" />
+				<exclude name="spaceXattempt" />
+				<exclude name="falseRequest" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test
+		name="Verify that latest API returns data of the result of last attempt ">
+		<classes>
+			<class name="TestRestAssure.SpaceXAPITest" />
+			<methods>
+				<exclude name="statusCode" />
+				<exclude name="headerinfo" />
+				<exclude name="falseRequest" />
+			</methods>
+		</classes>
+	</test>
+	
+<test
+		name="Verify that latest API doesn't returns data for false request">
+		<classes>
+			<class name="TestRestAssure.SpaceXAPITest" />
+			<methods>
+				<exclude name="statusCode" />
+				<exclude name="headerinfo" />
+				<exclude name="spaceXattempt" />
+			</methods>
+		</classes>
+	</test>
+</suite>

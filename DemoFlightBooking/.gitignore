@@ -1,0 +1,38 @@
+#################
+## Eclipse
+#################
+
+
+.project
+.metadata
+bin/
+tmp/
+test-output/
+log/
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.log
+*.class
+
+
+.settings/
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+/bin/
+*.class
+*.class
+*.png
+*.avi
+
